@@ -5,6 +5,10 @@ import Form from './Views/Form/Form';
 import Detail from './Views/Detail/Detail';
 import Landing from './Views/Landing/Landing';
 import Navbar from './Components/Navbar/Navbar';
+import axios from 'axios'
+
+// axios.defaults.baseURL = 'http://localhost:3001'
+axios.defaults.baseURL = 'pi-pokemon-backend-production.up.railway.app'
 
 function App() {
   return (
