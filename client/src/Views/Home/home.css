@@ -1,0 +1,37 @@
+.main-home-cont{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 3%;
+}
+
+.functions-cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page-buttons-cont{
+    display: flex;
+    justify-content: center;
+}
+
+button {
+        color: white;
+        width: auto;
+        height: 2rem;
+        border: 3px solid black;
+        border-radius: 45px;
+        transition: all 0.3s;
+        cursor: pointer;
+        background: #C12026;
+        font-size: 1.2rem;
+        font-weight: 550;
+        margin: 1rem;
+}
+
+button:hover {
+    background: white;
+    color: #C12026;
+}
