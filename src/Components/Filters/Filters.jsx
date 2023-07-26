@@ -6,7 +6,7 @@ import './filters.css'
 const Filters = () => {
 
     const dispatch = useDispatch();
-    const [selected, useSelected] = useState({
+    const [selected, setSelected] = useState({
         filterByType: "",
         filterBySource: "",
         orderByName: "",
@@ -15,7 +15,7 @@ const Filters = () => {
 
     const filterByType = (e) => {
         dispatch(filterPokemonByType(e.target.value))
-        useSelected({
+        setSelected({
             ...selected,
             filterByType: e.target.value
         })
@@ -23,7 +23,7 @@ const Filters = () => {
 
     const filterBysource = (e) => {
         dispatch(filterPokemonBySource(e.target.value))
-        useSelected({
+        setSelected({
             ...selected,
             filterBySource: e.target.value
         })
@@ -32,7 +32,7 @@ const Filters = () => {
 
     const orderByName = (e) => {
         dispatch(orderPokemonByName(e.target.value));
-        useSelected({
+        setSelected({
             ...selected,
             orderByName: e.target.value
         })
@@ -40,7 +40,7 @@ const Filters = () => {
 
     const orderByAttack = (e) => {
         dispatch(orderPokemonByAttack(e.target.value));
-        useSelected({
+        setSelected({
             ...selected,
             orderByAttack: e.target.value
         })
@@ -48,7 +48,7 @@ const Filters = () => {
 
     const reset = () => {
         dispatch(resetPokemon());
-        useSelected({
+        setSelected({
             ...selected,
             filterByType: "off",
             filterBySource: "off",
