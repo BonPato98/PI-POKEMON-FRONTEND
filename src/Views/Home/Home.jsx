@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import './home.css'
 import Cards from '../../Components/Cards/Cards'
 import {useDispatch, useSelector} from "react-redux"
