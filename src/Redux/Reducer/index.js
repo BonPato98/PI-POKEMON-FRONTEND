@@ -89,6 +89,7 @@ function rootReducer(state = initialState, action) {
                 return {...state}
             } else {
                 if(state.typeFilter) {
+                      // eslint-disable-next-line array-callback-return
                     let filteredPokemon = [...state.typesOnPokemons].filter(p => {
                         if (action.payload === "API") return !isNaN(p.id)
                         if (action.payload === "DB") return isNaN(p.id)})
@@ -102,6 +103,7 @@ function rootReducer(state = initialState, action) {
                         }
                 }
                 else {
+                      // eslint-disable-next-line array-callback-return
                     let filteredPokemon = [...state.pokemons].filter(p => {
                         if (action.payload === "API") return !isNaN(p.id)
                         if (action.payload === "DB") return isNaN(p.id)})

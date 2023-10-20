@@ -73,6 +73,7 @@ export function getPokemonDetails(id) {
                 })
                 const modifiedTypes = [...types]
                 const typesTranslated = []
+                  // eslint-disable-next-line array-callback-return
                 modifiedTypes.map(t => {
                     typesTranslated.push( translated[t])
                 })
@@ -86,6 +87,7 @@ export function getPokemonDetails(id) {
                     types.push(type)
                 })
                 const typesTranslated = []
+                  // eslint-disable-next-line array-callback-return
                 types.map(t => {
                     typesTranslated.push( translated[t])
                 })
@@ -103,7 +105,7 @@ export function getPokemonDetails(id) {
 export function postPokemon(input) {
     return async function (dispatch) {
         try {
-            const response = await axios.post("/pokemons", input)
+            await axios.post("/pokemons", input)
             alert("Pokemon creado con éxito!")
         } catch (error) {
             alert(error.response.data.response)

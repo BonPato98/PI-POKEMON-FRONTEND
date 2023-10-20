@@ -45,7 +45,7 @@ const Form = () => {
       if(regex.test(input.image)) setErrors({...errors, image:""})
       else setErrors({...errors, image:"La imagen debe ser una URL con extensión jpg o png"})
 
-      if(input.image=="") setErrors({...errors, image:"Campo obligatorio (Debe ser una URL con extensión jpg o png)"})
+      if(input.image==="") setErrors({...errors, image:"Campo obligatorio (Debe ser una URL con extensión jpg o png)"})
     }
     if(name === "hp"){
       let regex = (/^[0-9]+$/)
@@ -54,7 +54,7 @@ const Form = () => {
 
      if(input.hp > 255) setErrors({...errors, hp:"El valor de una caracteristica no puede ser mayor a 255"})
 
-     if(input.hp=="") setErrors({...errors, hp:"Campo obligatorio (Debe ser un número entero)"})
+     if(input.hp==="") setErrors({...errors, hp:"Campo obligatorio (Debe ser un número entero)"})
     }
     if(name === "attack"){
       let regex = (/^[0-9]+$/)
@@ -63,7 +63,7 @@ const Form = () => {
 
      if(input.attack > 255) setErrors({...errors, attack:"El valor de una caracteristica no puede ser mayor a 255"})
 
-     if(input.attack=="") setErrors({...errors, attack:"Campo obligatorio (Debe ser un número entero)"})
+     if(input.attack==="") setErrors({...errors, attack:"Campo obligatorio (Debe ser un número entero)"})
     }
     if(name === "defense"){
       let regex = (/^[0-9]+$/)
@@ -72,7 +72,7 @@ const Form = () => {
 
      if(input.defense > 255) setErrors({...errors, defense:"El valor de una caracteristica no puede ser mayor a 255"})
 
-     if(input.defense=="") setErrors({...errors, defense:"Campo obligatorio (Debe ser un número entero)"})
+     if(input.defense==="") setErrors({...errors, defense:"Campo obligatorio (Debe ser un número entero)"})
     }
     if(name === "speed"){
       let regex = (/^[0-9]+$/)
@@ -81,7 +81,7 @@ const Form = () => {
 
      if(input.speed > 255) setErrors({...errors, speed:"El valor de una caracteristica no puede ser mayor a 255"})
 
-     if(input.speed=="") setErrors({...errors, speed:""})
+     if(input.speed==="") setErrors({...errors, speed:""})
     }
     if(name === "height"){
       let regex = (/^[0-9]+$/)
@@ -90,7 +90,7 @@ const Form = () => {
 
       if(input.height > 255) setErrors({...errors, height:"El valor de una caracteristica no puede ser mayor a 255"})
 
-      if(input.height=="") setErrors({...errors, height:""})
+      if(input.height==="") setErrors({...errors, height:""})
     }
     if(name === "weight"){
       let regex = (/^[0-9]+$/)
@@ -99,7 +99,7 @@ const Form = () => {
 
       if(input.weight > 255) setErrors({...errors, weight:"El valor de una caracteristica no puede ser mayor a 255"})
 
-      if(input.weight=="") setErrors({...errors, weight:""})
+      if(input.weight==="") setErrors({...errors, weight:""})
     }
     if(name === "types"){
 

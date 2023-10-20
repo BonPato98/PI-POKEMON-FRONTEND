@@ -10,10 +10,12 @@ const Card = (props) => {
 
   const types = props.types
   const typesCapitalized = [];
+  // eslint-disable-next-line array-callback-return
   types.map(t => {
   const firstLetter = t[0]
   const capitalizedType = firstLetter.toUpperCase() + t.substring(1)
   typesCapitalized.push(capitalizedType)
+  
   })
 
   const translated = {
@@ -40,9 +42,7 @@ const Card = (props) => {
   }
 
   const typesTranslated = []
-  typesCapitalized.map(t => {
-    typesTranslated.push( translated[t])
-  })
+  typesCapitalized.map(t => typesTranslated.push( translated[t]))
   
   return (
     <Link to={`/detail/${props.id}`} className="card-link"> 
